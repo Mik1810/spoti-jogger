@@ -32,15 +32,9 @@ public class MainApp extends Application {
 			.build();
 
 	public static void authorizationCodeUri_Sync() {
-		try {
-			final URI uri = authorizationCodeUriRequest.execute();
-			Desktop d = Desktop.getDesktop();
-			d.browse(uri);
+		final URI uri = authorizationCodeUriRequest.execute();
 
-			System.out.println("URI: " + uri.toString());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		System.out.println("URI: " + uri.toString());
 	}
 
 	@Override
