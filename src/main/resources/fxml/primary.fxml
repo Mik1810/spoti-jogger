@@ -5,11 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sproject.tinify.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="121.0" prefWidth="268.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sproject.tinify.FXMLController">
     <children>
-        <Button layoutX="86.0" layoutY="107.0" onAction="#btnClickAction" text="Click Me!" />
+        <Button fx:id="codeButton" layoutX="27.0" layoutY="82.0" onAction="#setCode" prefHeight="26.0" prefWidth="94.0" text="Set code" />
         <Label fx:id="lblOut" layoutX="53.0" layoutY="30.0" minHeight="16" minWidth="69" prefHeight="52.0" prefWidth="215.0" />
-      <TextField fx:id="codeTextField" layoutX="86.0" layoutY="44.0" promptText="Code..." />
-      <Button fx:id="dataButton" layoutX="171.0" layoutY="107.0" onAction="#getDataAction" text="Get Data" />
+      <TextField fx:id="codeTextField" layoutX="27.0" layoutY="30.0" prefHeight="36.0" prefWidth="215.0" promptText="Code..." />
+      <Button fx:id="tokenButton" layoutX="146.0" layoutY="82.0" onAction="#refreshToken" prefHeight="26.0" prefWidth="94.0" text="Refresh Token" />
     </children>
 </AnchorPane>

@@ -1,6 +1,5 @@
 package sproject.tinify;
 
-import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 
@@ -16,32 +15,11 @@ import se.michaelthelin.spotify.requests.authorization.authorization_code.Author
 public class MainApp extends Application {
 
 	private static Stage stage;
-	private static final String clientId = "";
-	private static final String clientSecret = "";
-	private static final URI redirectUri = SpotifyHttpManager.makeUri("https://example.com/spotify-redirect");
-
-	static final SpotifyApi spotifyApi = new SpotifyApi.Builder()
-			.setClientId(clientId)
-			.setClientSecret(clientSecret)
-			.setRedirectUri(redirectUri)
-			.build();
-
-	private static final AuthorizationCodeUriRequest authorizationCodeUriRequest = spotifyApi.authorizationCodeUri()
-			.scope("user-read-currently-playing")
-			.show_dialog(true)
-			.build();
-
-	public static void authorizationCodeUri_Sync() {
-		final URI uri = authorizationCodeUriRequest.execute();
-
-		System.out.println("URI: " + uri.toString());
-	}
 
 	@Override
 	public void start(@SuppressWarnings("exports") Stage s) throws IOException {
 		stage = s;
 		setRoot("primary", "");
-		authorizationCodeUri_Sync();
 	}
 
 	static void setRoot(String fxml) throws IOException {
