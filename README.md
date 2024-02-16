@@ -1,4 +1,4 @@
-# tinify
+# spoti-jogger
 A tool to get information about the current song played by Spotify via API
 
 # Instructions:
